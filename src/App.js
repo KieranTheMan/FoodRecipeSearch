@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form';
 
-//get API, class App extends Component
-//e full page prevent the default 
+const API_KEY = '01f595e31a6643bc981009465687ee75'
+ 
 class App extends Component {
   getRecipe = (e) => {
     const recipeName = e.target.elements.recipeName.value
-    e.preventDefault(); // prefevents the fullpage frome refreshing
+    e.preventDefault(); // prefevents the fullpage from refreshing
+    const api_call = 'https://api.spoonacular.com/food/products/search?query=yogurt&apiKey=API-KEY'
     console.log(recipeName);
   }
 
