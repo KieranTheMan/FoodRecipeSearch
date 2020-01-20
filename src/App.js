@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Form from './components/Form';
 
 //get API, class App extends Component
-
-class App extends Component () {
-  getRecipe() {
-   console.log('working');
+//e full page prevent the default 
+class App extends Component {
+  getRecipe = (e) => {
+    e.preventDefault();
+    console.log('working');
   }
 
-  return () {
+  render () {
     return (
       <div className="App">
         <header className="App-header">
