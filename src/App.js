@@ -6,8 +6,9 @@ import Form from './components/Form';
 //e full page prevent the default 
 class App extends Component {
   getRecipe = (e) => {
-    e.preventDefault();
-    console.log('working');
+    const recipeName = e.target.elements.recipeName.value
+    e.preventDefault(); // prefevents the fullpage frome refreshing
+    console.log(recipeName);
   }
 
   render () {
