@@ -9,7 +9,8 @@ class App extends Component {
     const recipeName = e.target.elements.recipeName.value
     e.preventDefault(); // prefevents the fullpage from refreshing
     const api_call = await fetch(`https://api.spoonacular.com/food/products/search?query=yogurt&apiKey=${API_KEY}`)
-    console.log(recipeName);
+    const data = await api_call.json();
+    console.log(data);
   }
 
   render () {
