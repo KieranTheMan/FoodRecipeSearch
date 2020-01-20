@@ -12,11 +12,13 @@ class App extends Component () {
 
   return () {
     return (
-    <div className="App">
-      <header className="App-header">
-        <h1 clsssName='App-title'>Recipe Search</h1>
-      </header>
-      <Form getRecipe={this.getRecipe}/>
-    </div>
-  );
+      <div className="App">
+        <header className="App-header">
+          <h1 clsssName='App-title'>Recipe Search</h1>
+        </header>
+        <Form getRecipe={this.getRecipe}/>
+      </div>
+    );
+  }
 }
+export default App;
