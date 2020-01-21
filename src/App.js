@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form';
 
-const API_KEY = '01f595e31a6643bc981009465687ee75'
+const API_KEY = '040fb28bea6246d79d1a029c1f6f212e'
 //asyn await then fetch api data 
 class App extends Component {
   getFood = async (e) => {
@@ -19,7 +19,7 @@ class App extends Component {
         <header className='App-header'>
           <h1 className='App-title'>Food Search</h1>
         </header>
-        <Form getFood={this.foodName}/>
+        <Form getFood={this.getFood}/>
       </div>
     );
   }
