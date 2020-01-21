@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form';
+import Foods from './components/Foods'
 
 const API_KEY = '040fb28bea6246d79d1a029c1f6f212e'
 //asyn await then fetch api data 
@@ -23,15 +24,8 @@ class App extends Component {
         <header className='App-header'>
           <h1 className='App-title'>Food Search</h1>
         </header>
-        <Form getFood={this.getFood}/>
-        {this.state.foods.map((food) => {
-            return (
-              <>
-                <img key={food.id}src={food.image} alt={food.title}/>
-                <p>{food.title}</p>
-              </>
-            ) 
-          })}
+          <Form getFood={this.getFood}/>
+          <Foods foods={this.state.foods}/>
       </div>
     );
   }
