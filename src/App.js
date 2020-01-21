@@ -25,7 +25,12 @@ class App extends Component {
         </header>
         <Form getFood={this.getFood}/>
         {this.state.foods.map((food) => {
-            return <p key={food.id}>{food.title}</p>
+            return (
+              <>
+                <img key={food.id}src={food.image} alt={food.title}/>
+                <p>{food.title}</p>
+              </>
+            ) 
           })}
       </div>
     );
