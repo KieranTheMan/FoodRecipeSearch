@@ -1,5 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Food = () => (
-    <div>Food Component</div>
-)
+class Food extends Component {
+    render() {
+        console.log(this.props);
+        return (
+            <div>Food Component</div>
+        );
+    }
+}
+
+export default Food;
