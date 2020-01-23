@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 const Foods = props => (
     <div className='container'>
         <div className='row'>
@@ -16,7 +16,9 @@ const Foods = props => (
                                 <h1 className='foods__title'>
                                     {food.title.length < 20 ? `${food.title}` : `${food.title.substring(0, 25)}...`}
                                 </h1>
-                                <button className='food__button'>View Product</button>
+                                <button className='food__button'>
+                                <Link to={{pathname: `/food/${food.id}`}}>View Product</Link>
+                                </button>
                             </div>
                         </div>
                     </div>
