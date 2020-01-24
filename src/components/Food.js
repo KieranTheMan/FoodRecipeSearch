@@ -8,14 +8,14 @@ class Food extends Component {
     }
 
     componentDidMount = async () => {
-            const title = this.props.location.state.food
-            const req = await fetch(`https://api.spoonacular.com/food/products/search?query=${title}&apiKey=${API_KEY}`)
+            const title = this.props.location.state.food;
+            const req = await fetch(`https://api.spoonacular.com/food/products/search?query=${title}&apiKey=${API_KEY}`);
             const res = await req.json();
-            console.log(res.products[0]);
+            this.setState({activefood: res.products[0]});
+            console.log(this.state.activefood);
         }
 
     render() {
-        console.log(this.props);
         return (
             <div>Food Component</div>
         );
