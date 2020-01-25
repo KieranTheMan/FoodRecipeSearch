@@ -23,6 +23,7 @@ class Food extends Component {
                     <img className='active-food_img' src={food.image} alt =
                     {food.title}/>
                     <h3 className='acitve-food_title'>{food.title}</h3>
+                    <button className='food__button'>Go Home</button>
                 </div>
             </div>
         );
