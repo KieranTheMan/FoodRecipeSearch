@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-const API_KEY = '040fb28bea6246d79d1a029c1f6f212e'
+import {Link} from 'react-router-dom';
+
+const API_KEY = '040fb28bea6246d79d1a029c1f6f212e';
 
 class Food extends Component {
 
@@ -20,10 +22,12 @@ class Food extends Component {
         return (
             <div className='container'>
                 <div className='active-food'>
-                    <img className='active-food_img' src={food.image} alt =
+                    <img className='active-food__img' src={food.image} alt =
                     {food.title}/>
-                    <h3 className='acitve-food_title'>{food.title}</h3>
-                    <button className='food__button'>Go Home</button>
+                    <h3 className='active-food__title'>{food.title}</h3>
+                    <button className='active-food__button'>
+                        <Link to='/'>Go Home</Link>
+                    </button>
                 </div>
             </div>
         );
