@@ -16,7 +16,7 @@ const Foods = props => (
                                 <h1 className='foods__title'>
                                     {food.title.length < 20 ? `${food.title}` : `${food.title.substring(0, 25)}...`}
                                 </h1>
-                                <button className='food__button'>
+                                <button className='food__buttons'>
                                 <Link to={{
                                     pathname: `/food/${food.id}`,
                                     state: {food: food.title}
