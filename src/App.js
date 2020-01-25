@@ -15,9 +15,11 @@ class App extends Component {
     const api_call = await fetch(`https://api.spoonacular.com/food/products/search?query=${foodName}&apiKey=${API_KEY}`)
     const data = await api_call.json();
     this.setState({foods: data.products})
-    console.log(this.state.foods);
   }
-
+  componentDidUpdate = () => {
+    let foods = JSON.stringify(this.state.foods);
+    localStorage.setItem('foods', foods);
+  }
   render () {
     return (
       <div className='App'>
