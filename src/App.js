@@ -16,15 +16,24 @@ class App extends Component {
     const data = await api_call.json();
     this.setState({foods: data.products})
   }
+  
   componentDidUpdate = () => {
-    let foods = JSON.stringify(this.state.foods);
+    const foods = JSON.stringify(this.state.foods);
     localStorage.setItem('foods', foods);
   }
+
+  componentDidMount = () => {
+    const json = localStorage.getItem('foods');
+    const foods = JSON.parse(json);
+    this.setState({ foods: foods });
+  }
+
+
   render () {
     return (
       <div className='App'>
         <header className='App-header'>
-          <h1 className='App-title'>Food Search</h1>
+          <div className='App-title'>FOOD SEARCH</div>
         </header>
           <Form getFood={this.getFood}/>
           <Foods foods={this.state.foods}/>
