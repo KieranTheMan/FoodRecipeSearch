@@ -20,16 +20,20 @@ class Food extends Component {
     render() {
         const food = this.state.activeFood;
         return (
-            <div className='container'>
-                <div className='active-food'>
-                    <img className='active-food__img' src={food.image} alt =
-                    {food.title}/>
-                    <h3 className='active-food__title'>{food.title}</h3>
-                    <button className='active-food__button'>
-                        <Link to='/'>Go Home</Link>
-                    </button>
+            <>
+                <div className='container'>
+                    <div className= 'food__box'>
+                        <div className='active-food'>
+                            <img className='active-food__img' src={food.image} alt =
+                            {food.title}/>
+                            <h3 className='active-food__title'>{food.title}</h3>
+                            <button className='active-food__button'>
+                                <Link to='/'>Go Home</Link>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </>
         );
     }
 }
